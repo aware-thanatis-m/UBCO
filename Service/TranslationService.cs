@@ -18,10 +18,11 @@ namespace UBCOWeb.Service
             string allLetters = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ";
             string lettersLower = "bcdfghjklmnpqrstvwxyz";
             string lettersUpper = "BCDFGHJKLMNPQRSTVWXYZ";
+            string vowels = "aeiouAEIOU";
 
             foreach (char item in input)
             {
-                if ("aeiouAEIOU".Contains(item))
+                if (vowels.Contains(item))
                 {
                     //do double time
                     result += item;
@@ -41,7 +42,6 @@ namespace UBCOWeb.Service
 
             result += CountWords(input);
             return result;
-
         }
 
 
