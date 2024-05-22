@@ -1,0 +1,22 @@
+﻿@model UBCOWeb.Model.TranslationModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+    <div class="text-center">
+        <h1 class="display-4">Please input your text</h1>
+        <form action="/Home/Submit" method="post">
+            <label for="inputString">Enter a text:</label>
+            <input type="text" id="inputString" name="inputString" /> <br><br>
+            <input type="submit" value="Submit"> <br>
+        </form>
+
+        @if (Model != null && !string.IsNullOrEmpty(Model.Result))
+        {
+            <label for="result" id="result">Result: @Model.Result</label>
+        }
+    </div>
+</div>
